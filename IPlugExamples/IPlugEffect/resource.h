@@ -7,6 +7,7 @@
 #define BUNDLE_NAME "IPlugEffect"
 
 #define PLUG_ENTRY IPlugEffect_Entry
+#define PLUG_FACTORY IPlugEffect_Factory
 #define PLUG_VIEW_ENTRY IPlugEffect_ViewEntry
 
 #define PLUG_ENTRY_STR "IPlugEffect_Entry"
