@@ -8,7 +8,7 @@
 #import "IGraphicsMac_view.h"
 #include "IControl.h"
 
-#include "swell.h"
+//#include "swell.h"
 
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
 
@@ -129,11 +129,6 @@ bool IGraphicsMac::OSFindResource(const char* name, const char* type, WDL_String
 {
   if(CSTR_NOT_EMPTY(name))
   {
-    if(IsSandboxed())
-    {
-      printf("SAND");
-    }
-    
     bool foundInBundle = GetResourcePathFromBundle(GetBundleID(), name, type, result);
     
     if(foundInBundle)
