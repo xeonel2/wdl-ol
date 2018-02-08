@@ -206,7 +206,6 @@
 		4FB600261567CB0A0020189A /* AAX_Exports.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4CC38A1549B91100A9EA21 /* AAX_Exports.cpp */; };
 		4FB600271567CB0A0020189A /* IPlugAAX.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4CC4251549BED600A9EA21 /* IPlugAAX.cpp */; };
 		4FB600281567CB0A0020189A /* IPlugAAX_Describe.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4CC4401549C15500A9EA21 /* IPlugAAX_Describe.cpp */; };
-		4FBF95681F3F5DDC00A92E48 /* libAAXLibrary_libcpp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F83C3721F3F599D0044D8B8 /* libAAXLibrary_libcpp.a */; };
 		4FCDBC9F202119BA000362CC /* fcondition.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDBC9C20211993000362CC /* fcondition.cpp */; };
 		4FCDBCA0202119BA000362CC /* flock.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDBC9E20211993000362CC /* flock.cpp */; };
 		4FCDBCA1202119BA000362CC /* baseiids.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FCDBC8420211956000362CC /* baseiids.cpp */; };
@@ -310,27 +309,6 @@
 			remoteGlobalIDString = 4F3AE17812C0E5E2001FD7A4;
 			remoteInfo = "AU_32&64_intel";
 		};
-		4F83C3711F3F599D0044D8B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 842A79751A6098F400EC60F5;
-			remoteInfo = AAXLibrary_libcpp;
-		};
-		4F83C3731F3F59A10044D8B8 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 842A78E51A6098F400EC60F5;
-			remoteInfo = AAXLibrary_libcpp;
-		};
-		4F8B6722158B4EB2002FC25B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D2AAC046055464E500DB518D;
-			remoteInfo = AAXLibrary;
-		};
 		4F9828F7140A9F0200F3FCC1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 089C1669FE841209C02AAC07 /* Project object */;
@@ -360,6 +338,7 @@
 		4F0848262015129400F9E881 /* IPlugAAX_Parameters.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAAX_Parameters.h; path = ../../../IPlug/AAX/IPlugAAX_Parameters.h; sourceTree = "<group>"; };
 		4F0848272015129400F9E881 /* IPlugAAX_view_interface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAAX_view_interface.h; path = ../../../IPlug/AAX/IPlugAAX_view_interface.h; sourceTree = "<group>"; };
 		4F0848282015129400F9E881 /* IPlugAAX_TaperDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPlugAAX_TaperDelegate.h; path = ../../../IPlug/AAX/IPlugAAX_TaperDelegate.h; sourceTree = "<group>"; };
+		4F19A371202BF6FC00E51A51 /* IPlugOBJCPrefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugOBJCPrefix.pch; path = ../../../IPlug/IPlugOBJCPrefix.pch; sourceTree = "<group>"; };
 		4F1AF38120210A1F009AAE47 /* lice_arc.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lice_arc.cpp; path = ../../../WDL/lice/lice_arc.cpp; sourceTree = "<group>"; };
 		4F1AF38220210A1F009AAE47 /* lice_jpg.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lice_jpg.cpp; path = ../../../WDL/lice/lice_jpg.cpp; sourceTree = "<group>"; };
 		4F1AF38320210A1F009AAE47 /* lice_text.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = lice_text.cpp; path = ../../../WDL/lice/lice_text.cpp; sourceTree = "<group>"; };
@@ -511,7 +490,6 @@
 		4F8F61A8202807B9003F2573 /* IPlugProcessor.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = IPlugProcessor.cpp; path = ../../../IPlug/IPlugProcessor.cpp; sourceTree = "<group>"; };
 		4F8F61B120280CB4003F2573 /* IPlugBase_select.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugBase_select.h; path = ../../../IPlug/IPlugBase_select.h; sourceTree = "<group>"; };
 		4F9828E0140A9EB700F3FCC1 /* IPlugEffect.vst3 */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IPlugEffect.vst3; sourceTree = BUILT_PRODUCTS_DIR; };
-		4F996297201BF3F600E7C158 /* IPlugEffect_controls.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = IPlugEffect_controls.h; path = ../IPlugEffect_controls.h; sourceTree = "<group>"; };
 		4F99A8F7201129D2004F7C4C /* IGraphicsLiveEdit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsLiveEdit.h; path = ../../../IPlug/IGraphics/IGraphicsLiveEdit.h; sourceTree = "<group>"; };
 		4F9DC952201CB51300AFC62D /* BefacoBigKnob.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = BefacoBigKnob.svg; path = ../resources/img/BefacoBigKnob.svg; sourceTree = "<group>"; };
 		4FA6B9531FF9C22700049441 /* IControls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IControls.h; path = ../../../IPlug/IGraphics/IControls.h; sourceTree = "<group>"; };
@@ -607,7 +585,6 @@
 		4FF1427C1FD4A61E00A65575 /* IGraphicsLice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IGraphicsLice.h; path = ../../../IPlug/IGraphics/IGraphicsLice.h; sourceTree = "<group>"; };
 		4FF1427E1FD4A61E00A65575 /* IPopupMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPopupMenu.h; path = ../../../IPlug/IGraphics/IPopupMenu.h; sourceTree = "<group>"; };
 		4FF7B0D4156A825000E6CB12 /* common.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = common.xcconfig; path = ../../../common.xcconfig; sourceTree = SOURCE_ROOT; };
-		4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = AAXLibrary.xcodeproj; path = ../../../AAX_SDK/Libs/AAXLibrary/MacBuild/AAXLibrary.xcodeproj; sourceTree = SOURCE_ROOT; };
 		52FBBED30D0CF143001C8B8A /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; indentWidth = 2; lastKnownFileType = sourcecode.c.h; name = config.h; path = ../config.h; sourceTree = "<group>"; tabWidth = 2; usesTabs = 0; };
 /* End PBXFileReference section */
 
@@ -644,7 +621,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FBF95681F3F5DDC00A92E48 /* libAAXLibrary_libcpp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -664,7 +640,6 @@
 				52FBBED30D0CF143001C8B8A /* config.h */,
 				4F3862EE2014BBEC0009F402 /* IPlugEffect.h */,
 				4F3862ED2014BBEC0009F402 /* IPlugEffect.cpp */,
-				4F996297201BF3F600E7C158 /* IPlugEffect_controls.h */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C1671FE841209C02AAC07 /* Frameworks */,
@@ -746,7 +721,7 @@
 		4F24EE751567A6A6006B889A /* AAX_SDK */ = {
 			isa = PBXGroup;
 			children = (
-				4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */,
+				4FA027E6202C63A2003E95F7 /* AAX_Library */,
 				4F4CC38C1549B92900A9EA21 /* CommonDebugSettings.xcconfig */,
 				4F4CC38D1549B92900A9EA21 /* CommonReleaseSettings.xcconfig */,
 				4F4CC38A1549B91100A9EA21 /* AAX_Exports.cpp */,
@@ -771,6 +746,7 @@
 		4F3E69001409743C00C4D749 /* VST3 */ = {
 			isa = PBXGroup;
 			children = (
+				4F3E696A1409778C00C4D749 /* VST3_SDK */,
 				4F3E69041409746500C4D749 /* IPlugVST3.cpp */,
 				4F3E69051409746500C4D749 /* IPlugVST3.h */,
 			);
@@ -996,6 +972,7 @@
 				4F78D8FE13B63BA50032E0F3 /* IPlugStructs.h */,
 				4F78D90513B63BA50032E0F3 /* IPlugMidi.h */,
 				4F78D8FA13B63BA50032E0F3 /* IPlugLogger.h */,
+				4F19A371202BF6FC00E51A51 /* IPlugOBJCPrefix.pch */,
 			);
 			name = IPlug;
 			sourceTree = "<group>";
@@ -1042,19 +1019,9 @@
 				4FDA1DE4201271160027C868 /* app_dialog.cpp */,
 				4FDA1DE5201271160027C868 /* app_main.cpp */,
 				4FDA1DE3201271150027C868 /* app_main.h */,
-				4F3E696A1409778C00C4D749 /* VST3_SDK */,
 				4FDA1DE2201271150027C868 /* main.mm */,
 			);
 			name = APP;
-			sourceTree = "<group>";
-		};
-		4F8B671E158B4EB2002FC25B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4F8B6723158B4EB2002FC25B /* libAAXLibrary.a */,
-				4F83C3721F3F599D0044D8B8 /* libAAXLibrary_libcpp.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4F94ABBD2013B2400058CC5E /* DrawClasses */ = {
@@ -1067,6 +1034,13 @@
 				4FDA1DD020123CB30027C868 /* AGG */,
 			);
 			name = DrawClasses;
+			sourceTree = "<group>";
+		};
+		4FA027E6202C63A2003E95F7 /* AAX_Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = AAX_Library;
 			sourceTree = "<group>";
 		};
 		4FCDBC812021192D000362CC /* Base */ = {
@@ -1453,7 +1427,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				4F83C3741F3F59A10044D8B8 /* PBXTargetDependency */,
 			);
 			name = AAX;
 			productInstallPath = "$(HOME)/Library/Bundles";
@@ -1494,6 +1467,7 @@
 				TargetAttributes = {
 					4F39075F2013EBA300DDA490 = {
 						CreatedOnToolsVersion = 9.2;
+						DevelopmentTeam = 686EDA2T8T;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -1502,6 +1476,7 @@
 						};
 					};
 					4FD16A0813B63081001D0217 = {
+						DevelopmentTeam = 686EDA2T8T;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Sandbox = {
@@ -1523,12 +1498,6 @@
 			);
 			mainGroup = 089C166AFE841209C02AAC07 /* IPlugExample */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 4F8B671E158B4EB2002FC25B /* Products */;
-					ProjectRef = 4FF7B0F3156A831000E6CB12 /* AAXLibrary.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				4F78DAF113B643600032E0F3 /* All */,
@@ -1541,23 +1510,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		4F83C3721F3F599D0044D8B8 /* libAAXLibrary_libcpp.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAAXLibrary_libcpp.a;
-			remoteRef = 4F83C3711F3F599D0044D8B8 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		4F8B6723158B4EB2002FC25B /* libAAXLibrary.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAAXLibrary.a;
-			remoteRef = 4F8B6722158B4EB2002FC25B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4F20EEC9132C69FE0030E34C /* Resources */ = {
@@ -1967,11 +1919,6 @@
 			isa = PBXTargetDependency;
 			target = 4F3AE17812C0E5E2001FD7A4 /* AU */;
 			targetProxy = 4F78DAF913B6436B0032E0F3 /* PBXContainerItemProxy */;
-		};
-		4F83C3741F3F59A10044D8B8 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = AAXLibrary_libcpp;
-			targetProxy = 4F83C3731F3F59A10044D8B8 /* PBXContainerItemProxy */;
 		};
 		4F9828F8140A9F0200F3FCC1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
