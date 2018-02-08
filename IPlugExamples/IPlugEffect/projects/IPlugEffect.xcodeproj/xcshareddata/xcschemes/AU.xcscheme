@@ -48,8 +48,7 @@
       allowLocationSimulation = "YES">
       <PathRunnable
          runnableDebuggingMode = "0"
-         BundleIdentifier = "com.apple.audio.aulab"
-         FilePath = "/Applications/AU Lab.app">
+         FilePath = "/Applications/REAPER64.app">
       </PathRunnable>
       <MacroExpansion>
          <BuildableReference

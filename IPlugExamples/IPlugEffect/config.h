@@ -8,12 +8,6 @@
 #define PLUG_EMAIL_STR "spam@me.com"
 #define PLUG_COPYRIGHT_STR  "Copyright 2017 Acme Inc"
 
-#define PLUG_CLASS_NAME IPlugEffect
-
-#define BUNDLE_NAME "IPlugEffect"
-#define BUNDLE_MFR "AcmeInc"
-#define BUNDLE_DOMAIN "com"
-
 #define PLUG_CHANNEL_IO "1-1"
 
 #define PLUG_LATENCY 0
@@ -21,6 +15,12 @@
 #define PLUG_DOES_MIDI 0
 #define PLUG_DOES_STATE_CHUNKS 0
 #define PLUG_HAS_UI 1
+
+#define PLUG_CLASS_NAME IPlugEffect
+
+#define BUNDLE_NAME "IPlugEffect"
+#define BUNDLE_MFR "AcmeInc"
+#define BUNDLE_DOMAIN "com"
 
 #define AUV2_ENTRY IPlugEffect_Entry
 #define AUV2_ENTRY_STR "IPlugEffect_Entry"

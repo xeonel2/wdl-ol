@@ -6,8 +6,6 @@
 IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
 : IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
-  TRACE;
-  
   GetParam(kGain)->InitDouble("Gain", 0., 0., 100.0, 0.01, "%");
 
   // create graphics context
@@ -17,8 +15,8 @@ IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
   pGraphics->AttachPanelBackground(COLOR_RED);
   
   // create a rectangular region for our control
-  //                   L   T   W   H
-  IRECT bounds = IRECT(10, 10, 50, 50);
+  //                   L   T     R    B
+  IRECT bounds = IRECT(100, 50, 200, 200);
   
   // create and attach control to the graphics context
   pGraphics->AttachControl(new IVKnobControl(*this, bounds, kGain));
