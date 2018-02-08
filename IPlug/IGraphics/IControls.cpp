@@ -74,9 +74,11 @@ void IVKnobControl::Draw(IGraphics& graphics)
   const float v = mAngleMin + ((float) mValue * (mAngleMax - mAngleMin));
   const float cx = mRECT.MW(), cy = mRECT.MH();
   const float radius = (mRECT.W()/2.f) - 2.f;
-  graphics.DrawCircle(GetColor(EVColor::kBG), cx, cy, radius, &BLEND_50);
-  graphics.FillArc(GetColor(EVColor::kBG), cx, cy, radius, mAngleMin, v, &BLEND_50);
-  graphics.DrawRadialLine(GetColor(EVColor::kFG), cx, cy, v, mInnerRadius * radius, mOuterRadius * radius);
+  graphics.DrawCircle(GetColor(EVColor::kFR), cx, cy, radius);
+  graphics.FillCircle(GetColor(EVColor::kFG), cx, cy, radius);
+
+//  graphics.FillArc(GetColor(EVColor::kBG), cx, cy, radius, mAngleMin, v, &BLEND_50);
+  graphics.DrawRadialLine(GetColor(EVColor::kFR), cx, cy, v, mInnerRadius * radius, mOuterRadius * radius);
 }
 
 IVKeyboardControl::IVKeyboardControl(IPlugBaseGraphics& plug, IRECT rect,
