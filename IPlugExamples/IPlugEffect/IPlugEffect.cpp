@@ -7,7 +7,8 @@ IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
 : IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
   //TODO: implement! - Add parameters and controls
-  //ADVANCED: make a custom IControl
+  //ADVANCED: make a custom IControl see controls.h
+  
   MakeDefaultPreset("-", kNumPrograms);
 }
 
