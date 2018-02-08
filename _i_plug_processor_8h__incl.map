@@ -1,0 +1,10 @@
+<map id="IPlugProcessor.h" name="IPlugProcessor.h">
+<area shape="rect" id="node5" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="764,155,875,181"/>
+<area shape="rect" id="node14" href="$_i_plug_constants_8h.html" title="Constant definitions, magic numbers. " alt="" coords="1196,379,1319,405"/>
+<area shape="rect" id="node15" href="$_i_plug_utilities_8h.html" title="Utility functions and macros. " alt="" coords="492,304,599,331"/>
+<area shape="rect" id="node18" href="$_i_plug_structs_8h_source.html" title="IPlugStructs.h" alt="" coords="947,80,1052,107"/>
+<area shape="rect" id="node21" href="$_n_chan_delay_8h_source.html" title="NChanDelay.h" alt="" coords="1486,80,1593,107"/>
+<area shape="rect" id="node22" href="$_i_plug_processor_8cpp_source.html" title="IPlugProcessor.cpp" alt="" coords="195,229,329,256"/>
+<area shape="rect" id="node6" href="$_i_plug_logger_8h.html" title="IPlug Logging functionailty To trace some arbitrary data: Trace(TRACELOC, &quot;%s:%d&quot;, myStr, myInt); To simply create a trace entry in the log: TRACE; No need to wrap tracer calls in #ifdef TRACER_BUILD because Trace is a no&#45;op unless TRACER_BUILD is defined. " alt="" coords="729,229,831,256"/>
+<area shape="rect" id="node20" href="$_i_plug_midi_8h_source.html" title="IPlugMidi.h" alt="" coords="902,229,988,256"/>
+</map>

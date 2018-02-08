@@ -1,0 +1,5 @@
+<map id="IPlugUtilities.h" name="IPlugUtilities.h">
+<area shape="rect" id="node7" href="$_i_plug_constants_8h.html" title="Constant definitions, magic numbers. " alt="" coords="259,229,381,256"/>
+<area shape="rect" id="node8" href="$_i_plug_platform_8h.html" title="Include to get consistently named preprocessor macros for different platforms and logging functionali..." alt="" coords="291,80,401,107"/>
+<area shape="rect" id="node9" href="$_i_plug_logger_8h.html" title="IPlug Logging functionailty To trace some arbitrary data: Trace(TRACELOC, &quot;%s:%d&quot;, myStr, myInt); To simply create a trace entry in the log: TRACE; No need to wrap tracer calls in #ifdef TRACER_BUILD because Trace is a no&#45;op unless TRACER_BUILD is defined. " alt="" coords="387,155,489,181"/>
+</map>
