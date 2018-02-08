@@ -119,7 +119,7 @@ protected:
   void Stroke(const IColor& color, const IBlend* pBlend = nullptr)
   {
     SetCairoSourceRGBA(color, pBlend);
-    cairo_set_line_width(mContext, 1);
+    cairo_set_line_width(mContext, 2);
     cairo_stroke(mContext);
   }
   
