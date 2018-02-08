@@ -6,36 +6,13 @@
 IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
 : IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
-  GetParam(kGain)->InitDouble("Gain", 0., 0., 100.0, 0.01, "%");
-
-  // create graphics context
-  IGraphics* pGraphics = MakeGraphics(*this, 300, 300);
-  
-  // add a coloured background
-  pGraphics->AttachPanelBackground(COLOR_RED);
-  
-  // create a rectangular region for our control
-  //                   L   T     R    B
-  IRECT bounds = IRECT(100, 50, 200, 200);
-  
-  // create and attach control to the graphics context
-  pGraphics->AttachControl(new IVKnobControl(*this, bounds, kGain));
-
-  // attach graphics context
-  AttachGraphics(pGraphics);
-  
+  //TODO: implement! - Add parameters and controls
+  //ADVANCED: make a custom IControl
   MakeDefaultPreset("-", kNumPrograms);
 }
 
 void IPlugEffect::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
 {
-  sample* input = inputs[0];
-  sample* output = outputs[0];
-
-  const double gain = GetParam(kGain)->Value() / 100.;
-
-  for (int s = 0; s < nFrames; s++)
-  {
-    output[s] = input[s] * gain;
-  }
+  //TODO: implement a volume control
+  //ADVANCED: 1) make it stereo, 2) control the volume of sine wave harmonics (see oscillator.h)
 }

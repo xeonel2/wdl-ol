@@ -6,8 +6,7 @@ const int kNumPrograms = 1;
 
 enum EParams
 {
-  kGain = 0,
-  kNumParams
+  kNumParams,
 };
 
 class IPlugEffect : public IPlug
