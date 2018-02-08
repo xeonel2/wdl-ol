@@ -10,18 +10,6 @@ enum EParams
   kNumParams
 };
 
-enum ELayout
-{
-  kWidth = 300,
-  kHeight = 300,
-  
-  kTextX = 10,
-  kTextY = 10,
-  kGainX = 100,
-  kGainY = 100
-};
-
-
 class IPlugEffect : public IPlug
 {
 public:
@@ -30,10 +18,4 @@ public:
 //   void OnReset() override;
 //  void OnParamChange(int paramIdx) override;
   void ProcessBlock(sample** inputs, sample** outputs, int nFrames) override;
-  
-//  void OnActivate(bool activate) override
-//  {
-//    DBGMSG("number of inputs connected %i\n", NInChansConnected());
-//    DBGMSG("number of outputs connected %i\n", NOutChansConnected());
-//  }
 };

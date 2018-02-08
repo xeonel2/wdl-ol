@@ -3,17 +3,6 @@
 #include "IControls.h"
 #include "config.h"
 
-#include "IPlugEffect_controls.h"
-
-#ifdef OS_MAC
-#pragma mark - WATCH OUT IF APP IS SANDBOXED, YOU WON T FIND ANY FILES HERE
-#define SVG_FOLDER "/Users/oli/Dev/VCVRack/Rack/res/ComponentLibrary/"
-#define KNOB_FN "resources/img/BefacoBigKnob.svg"
-#else
-#define SVG_FOLDER "C:\\Program Files\\VCV\\Rack\\res\\ComponentLibrary\\"
-#define KNOB_FN "C:\\Program Files\\VCV\\Rack\\res\\ComponentLibrary\\BefacoBigKnob.svg"
-#endif
-
 IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
 : IPLUG_CTOR(kNumParams, kNumPrograms, instanceInfo)
 {
@@ -21,82 +10,34 @@ IPlugEffect::IPlugEffect(IPlugInstanceInfo instanceInfo)
   
   GetParam(kGain)->InitDouble("Gain", 0., 0., 100.0, 0.01, "%");
 
-#ifndef NO_IGRAPHICS
+  // create graphics context
+  IGraphics* pGraphics = MakeGraphics(*this, 300, 300);
   
-  IGraphics* pGraphics = MakeGraphics(*this, kWidth, kHeight, 60);
-  pGraphics->AttachPanelBackground(COLOR_GRAY);
+  // add a coloured background
+  pGraphics->AttachPanelBackground(COLOR_RED);
   
-  const int NRows = 2;
-  const int NColumns = 2;
+  // create a rectangular region for our control
+  //                   L   T   W   H
+  IRECT bounds = IRECT(10, 10, 50, 50);
+  
+  // create and attach control to the graphics context
+  pGraphics->AttachControl(new IVKnobControl(*this, bounds, kGain));
 
-  IRECT bounds = pGraphics->GetBounds();
-//  IColor color;
-//
-  pGraphics->AttachControl(new IArcControl(*this, bounds.GetGridCell(0, NRows, NColumns).GetPadded(-5.), kGain));
-  pGraphics->AttachControl(new IPolyControl(*this, bounds.GetGridCell(1, NRows, NColumns).GetPadded(-5.), -1));
-
-//  for(auto cell = 0; cell < (NRows * NColumns); cell++ )
-//  {
-//    IRECT cellRect = bounds.GetGridCell(cell, NRows, NColumns);
-//    pGraphics->AttachControl(new IVSwitchControl(*this, cellRect, kNoParameter, [pGraphics](IControl* pCaller)
-//                                                   {
-//                                                     pCaller->SetMEWhenGrayed(true);
-//                                                     pCaller->GrayOut(pGraphics->ShowMessageBox("Disable that box control?", "", MB_YESNO) == IDYES);
-//                                                   }));
-//  }
-
-//  auto svg = pGraphics->LoadSVG(KNOB_FN); // load initial svg, can be a resource or absolute path
-//
-//  for(auto cell = 0; cell < (NRows * NColumns); cell++ )
-//  {
-//    IRECT cellRect = bounds.GetGridCell(cell, NRows, NColumns);
-//    auto knobControl = new SVGKnob(*this, cellRect, svg, kGain);
-//    pGraphics->AttachControl(knobControl);
-//  }
-
-  //  auto fileMenuControl = new FileMenu(*this, bounds.GetGridCell(1, NRows, NColumns).SubRectVertical(2, 1).GetVPadded(-20.).GetHPadded(-20.),
-//                                           [pGraphics, knobControl](IControl* pCaller)
-//                                           {
-//                                             WDL_String path;
-//                                             dynamic_cast<IDirBrowseControlBase*>(pCaller)->GetSelecteItemPath(path);
-//                                             auto svg = pGraphics->LoadSVG(path.Get());
-//                                             knobControl->SetSVG(svg);
-//                                           },
-//                                          DEFAULT_TEXT, ".svg");
-//  fileMenuControl->SetPath(SVG_FOLDER);
-//  pGraphics->AttachControl(fileMenuControl);
-
-
-  IRECT kbrect = bounds.SubRectVertical(2, 1).GetPadded(-5.); // same as joining two cells
-  pGraphics->AttachControl(new IVKeyboardControl(*this, kbrect, 36, 60));
-
+  // attach graphics context
   AttachGraphics(pGraphics);
   
-  pGraphics->HandleMouseOver(true);
-//  pGraphics->EnableLiveEdit(true);
-//  pGraphics->ShowControlBounds(true);
-//  pGraphics->ShowAreaDrawn(true);
-
-#endif
-  PrintDebugInfo();
-
   MakeDefaultPreset("-", kNumPrograms);
 }
 
 void IPlugEffect::ProcessBlock(sample** inputs, sample** outputs, int nFrames)
 {
-  ENTER_PARAMS_MUTEX;
-  const double gain = GetParam(kGain)->Value() / 100.;
-  LEAVE_PARAMS_MUTEX;
-  
-  sample* in1 = inputs[0];
-  sample* in2 = inputs[1];
-  sample* out1 = outputs[0];
-  sample* out2 = outputs[1];
+  sample* input = inputs[0];
+  sample* output = outputs[0];
 
-  for (int s = 0; s < nFrames; ++s, ++in1, ++in2, ++out1, ++out2)
+  const double gain = GetParam(kGain)->Value() / 100.;
+
+  for (int s = 0; s < nFrames; s++)
   {
-    *out1 = *in1 * gain;
-    *out2 = *in2 * gain;
+    output[s] = input[s] * gain;
   }
 }
